@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Điểm chuẩn 3 Môn</div>
+                    <div class="card-body">
+                        <h4>input</h4>
+                        <p>Điểm chuẩn của trường <br>Điểm của 3 môn <br>Khu vực và đối tượng</p>
+                        <h4>Xử Lý</h4>
+                        <p> điểm Tb của 3 môn:(a+b+c)+điểm ưu tiên < điểm chuẩn của trường < 30đ <br>Điểm ưu tiên khu
+                                vưc: KVA (+2đ) , KVB (+1đ),KVC (+0.5đ)
+                                <br>Điểm ưu tiên Đối tượng: ĐT 1 (+2.5đ), ĐT 2 (+1.5đ), ĐT 3 (+0.25đ)
+                                <br> Nếu ko thuộc trong danh sách điểm chuẩn &ưu tiên =0
+                                <br>nếu 1 trong 3 môn =0 => rớt luôn k cần kiểm tra
+                        </p>
+                        <h4>output</h4>
+                        <p>Người đó đậu hay rớt và đc bn điểm</p>
+
+                        <div class="form-group">
+                            <label>Điểm Chuẩn</label>
+                            <input type="text" id="diemChuan" value="" class="form-control"
+                                placeholder="Nhập điểm chuẩn" />
+                            <label>Chọn khu vực</label>
+                            <select class="form-control" name="" id="chonKV">
+                                <option value="">Chọn Khu vực</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+
+
+                            </select>
+                            <label>Chọn đối tượng</label>
+                            <select class="form-control" name="" id="chonDT">
+                                <option value="">Chọn Đối Tượng</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+
+
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label>Môn1</label>
+                                <input type="text" id="mon1" class="form-control" value="" />
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Môn2</label>
+                                <input type="text" id="mon2" class="form-control" value="" />
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Môn3</label>
+                                <input type="text" id="mon3" class="form-control" value="" />
+                            </div>
+                        </div>
+                        <button id="ketQuaDiem" class="btn btn-success">Kết Quả</button>
+                    </div>
+                    <div id="footerKetQuaDiem" class="card-footer text-muted"></div>
+                </div>
+            </div>
+
+
+ <!-- Bài tập2 -->
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Điểm chuẩn 3 Môn</div>
+                    <div class="card-body">
+                        <h4>input</h4>
+                        <p>Tên <br>số điện tiêu thụ <br>Khu vực và đối tượng</p>
+                        <h4>Xử Lý</h4>
+
+                        <p>số tiền * số điện mỗi cột mốc (500đ*50kw đầu)
+                            <br>(650đ*50kw kế tiếp)
+                            <br>(850đ*100kw kế tiếp)
+                            <br>(1100đ*150kw kế tiếp)
+                            <br>(1300đ*còn lại kế tiếp)
+
+                        </p>
+                        <h4>output</h4>
+                        <p>họ tên và số tiền điện</p>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="form-group col-lg-4">
+                            <label>Họ tên</label>
+                            <input type="text" id="hoTen" class="form-control" value="" />
+                        </div>
+                        <div class="form-group col-lg-4">
+                            <label>Số tiền điện</label>
+                            <input type="text" id="tienDien" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <button id="kqTienDien" class="btn btn-success">Kết Quả</button>
+                </div>
+                <div id="footerTienDien" class="card-footer text-muted"></div>
+            </div>
+
+
+
+
+
+        </div>
+       
+
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
